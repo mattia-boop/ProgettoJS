@@ -1,48 +1,125 @@
+/*Include padding e bordi nel calcolo della larghezza totale degli elementi*/
+* {
+    box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    max-width: 800px;
-    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    max-width: 900px; 
     margin: 0 auto;
+    background-color: #0f3460;
+    color: #ffffff;
+    line-height: 1.6;
+    text-align: center;
+    padding: 0 20px;
+}
+
+h1, h2, h3, nav button {
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1px; /*spazio tra le lettere*/
 }
 
 header {
     background: #1a1a2e;
-    color: white;
-    font-size: 20px;
-    padding: 3px 15px;
-    margin-top: 40px;
-    margin-bottom: 10px;
+    padding: 20px;
+    margin-top: 20px;
+    border-bottom: 4px solid #e94560;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 800;
 }
 
 header p {
-    font-size: 25px;
+    font-size: 18px;
+    margin: 8px 0 0 0;
+    color: #e94560;
+    font-weight: 600;
 }
 
 nav {
     background: #16213e;
-    padding: 10px 
+    padding: 12px;
+    margin-bottom: 15px;
 }
 
 nav button {
-    background: #16213e;
+    background: transparent;
     color: white;
-    border: 1px solid white;
-    padding: 5px 10px;
-    margin-left: 5px;
-    margin-right: 5px;
+    border: 1px solid rgba(255,255,255,0.4);
+    padding: 8px 16px;
+    margin: 5px;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
-button:hover {
-    background-color: white;
-    color: #16213e;
-    cursor: pointer; 
+nav button:hover {
+    background: #e94560;
+    border-color: #e94560;
 }
 
 main section {
     display: none;
+    padding: 20px 0;
+    text-align: left;
 }
 
 main section.active {
     display: block;
-    opacity: 1;
+}
+
+#storia .eventi {
+    background: #16213e;
+    border-left: 3px solid #e94560;
+    margin-bottom: 8px; 
+    padding: 12px 20px; 
+    display: flex;
+    align-items: center;
+}
+
+#storia .eventi h3 {
+    margin: 0;
+    flex: 0 0 160px; /*non si allarga, non si restringe ma rimane fissa*/
+    font-size: 14px;
+    color: #e94560;
+    font-weight: 800;
+}
+
+#storia .eventi p {
+    margin: 0;
+    flex: 1; /* Il testo occupa tutto lo spazio rimanente */
+    font-size: 14px;
+    color: #d1d1d1;
+}
+
+.criminale {
+    background: #16213e;
+    border-left: 4px solid #e94560;
+    margin-bottom: 15px;
+    padding: 20px;
+}
+
+.criminale h3 {
+    margin: 0 0 10px 0;
+    font-size: 18px;
+    color: #e94560;
+}
+
+/*serve per far comparire il contenuto scritto alla fine di ogni sezione*/
+section::after {
+    display: block;
+    content: "Linea Libera (800 582 727) • Numero Verde Vittime Mafia (800 191 000)";
+    margin-top: 30px;
+    padding: 15px;
+    background: #e94560;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    text-align: center;
+    font-size: 13px;
+    border-radius: 4px;
 }
