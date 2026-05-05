@@ -120,3 +120,106 @@
 
 </body>
 </html>
+
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EDUCAZIONE ALLA LEGALITA'</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav id="menu">
+        <button id="btnHome">HOME</button>
+        <button id="btnStoria">LA STORIA</button>
+        <button id="btnOrganizzazioni">LE ORGANIZZAZIONI</button>
+        <button id="btnAntimafia">LE POLITICHE ANTIMAFIA</button>
+        <button id="btnQuiz">QUIZ</button>
+    </nav>
+
+    <main>
+        <section id="home" class="active">
+            <div class="container">
+                <h1 class="main-title">EDUCAZIONE ALLA LEGALITA'</h1>
+                <p class="subtitle">La lotta alla mafia in Italia</p>
+                <p class="quote">
+                    "La mafia è un fatto umano e come tutti i fatti umani ha un inizio e avrà anche una fine." <br>— Giovanni Falcone
+                </p>
+            </div>
+        </section>
+
+        <section id="storia">
+            <div class="container">
+                <h2>Cronologia Storica</h2>
+                <div class="eventi-container">
+                    <div class="eventi"><h3>XIX secolo</h3><p>In seguito all’Unità d’Italia nascono le prime forme di mafia in Sicilia.</p></div>
+                    <div class="eventi"><h3>1986-1992</h3><p>Maxiprocesso di Palermo guidato da Falcone e Borsellino.</p></div>
+                    <div class="eventi"><h3>1992</h3><p>Stragi di Capaci e via D’Amelio.</p></div>
+                    <div class="eventi"><h3>Oggi</h3><p>Lotta alle infiltrazioni economiche e finanziarie.</p></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="organizzazioni">
+            <div class="container">
+                <h2>Le Organizzazioni</h2>
+                <div class="criminale">
+                    <div class="titolo-org" data-target="ndrangheta"><h3>NDRANGHETA</h3><span>▼</span></div>
+                    <div id="ndrangheta" class="contenuto-tendina">
+                        <p>Originaria della Calabria, basata sul vincolo di sangue ('ndrine). Leader nel narcotraffico globale.</p>
+                    </div>
+                </div>
+                <div class="criminale">
+                    <div class="titolo-org" data-target="cosanostra"><h3>COSA NOSTRA</h3><span>▼</span></div>
+                    <div id="cosanostra" class="contenuto-tendina">
+                        <p>Nasce in Sicilia e si doffone molto anche negli USA a seguito delle immigrazioni del XX secolo dall’Italia. Sono divisi in famiglie dette cosche.
+                        Infiltrati nel kondo dell’imprenditoria e della finanza, grazie a pratiche come estorsioni (“pizzo”). Operano anche nel traffico di droga, in particolare eroina, e negli appalti pubblici</p>
+                    </div>
+                </div>
+                <div class="criminale">
+                    <div class="titolo-org" data-target="camorra"><h3>CAMORRA</h3><span>▼</span></div>
+                    <div id="camorra" class="contenuto-tendina">
+                        <p>Le sue radici storiche risalgono all'Ottocento nella Campania. E’ organizzata in gruppi autonomi, detti clan, spesso in competizione tra loro.
+                        Sono coinvolti in attività illecite come il traffico di droga, le estorsioni, gli appalti pubblici e il riciclaggio di denaro; si infiltrano anche nella politica locale</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="antimafia">
+            <div class="container">
+                <h2>Politiche Antimafia</h2>
+                <p class="intro-antimafia">La <b>Legge 109/96</b> permette il riutilizzo sociale dei beni confiscati.</p>
+                <div class="box-interattivo">
+                    <h3>Simulatore Valore Sociale</h3>
+                    <input type="number" id="cifra" placeholder="Importo in €">
+                    <br>
+                    <button id="btnCalcola">Calcola Impatto</button>
+                    <div id="risultato"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="quiz">
+            <div class="container">
+                <h2>Test Finale</h2>
+                <div class="box-interattivo" id="quiz-box">
+                    <p id="testo-domanda"></p>
+                    <div id="opzioni-quiz"></div>
+                    <div id="feedback"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Linea Libera: <b>800 582 727</b></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
