@@ -1,125 +1,302 @@
-/*Include padding e bordi nel calcolo della larghezza totale degli elementi*/
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    font-family: 'Open Sans', sans-serif;
-    max-width: 900px; 
-    margin: 0 auto;
-    background-color: #0f3460;
-    color: #ffffff;
-    line-height: 1.6;
-    text-align: center;
-    padding: 0 20px;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #0f0f1a;
+    color: white;
+    overflow-x: hidden;
 }
 
-h1, h2, h3, nav button {
-    font-family: 'Montserrat', sans-serif;
-    letter-spacing: 1px; /*spazio tra le lettere*/
-}
-
-header {
-    background: #1a1a2e;
-    padding: 20px;
-    margin-top: 20px;
-    border-bottom: 4px solid #e94560;
-}
-
-header h1 {
-    margin: 0;
-    font-size: 28px;
-    font-weight: 800;
-}
-
-header p {
-    font-size: 18px;
-    margin: 8px 0 0 0;
-    color: #e94560;
-    font-weight: 600;
-}
 
 nav {
-    background: #16213e;
-    padding: 12px;
-    margin-bottom: 15px;
+    background: rgba(22, 33, 62, 0.95);
+    padding: 15px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px solid #4ecca3;
+    backdrop-filter: blur(5px);
 }
 
 nav button {
-    background: transparent;
+    background: none;
+    border: none;
     color: white;
-    border: 1px solid rgba(255,255,255,0.4);
-    padding: 8px 16px;
-    margin: 5px;
-    font-size: 12px;
-    font-weight: 700;
-    cursor: pointer;
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 13px;
     transition: 0.3s;
+    cursor: pointer;
 }
 
 nav button:hover {
-    background: #e94560;
-    border-color: #e94560;
+    color: #4ecca3;
 }
 
-main section {
-    display: none;
-    padding: 20px 0;
+section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 20px;
+    min-height: 70vh;
+}
+
+section:nth-child(odd) {
+    background-color: #1a1a2e;
+}
+
+section:nth-child(even) {
+    background-color: #16213e;
+}
+
+.contenitore {
+    max-width: 1100px;
+    width: 100%;
+    text-align: center;
+}
+
+h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: #4ecca3;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+
+#home h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+#home .sottoTitolo {
+    font-size: 20px;
+    color: #adb5bd;
+}
+
+#home .citazione {
+    margin-top: 30px;
+    font-style: italic;
+    color: #4ecca3;
+}
+
+#storia {
+    min-height: 100vh;
+    padding: 120px 5% 80px;
+}
+
+.contenitoreEventi {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
     text-align: left;
 }
 
-main section.active {
-    display: block;
+.eventi {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-left: 4px solid #4ecca3;
+    border-radius: 4px;
 }
 
-#storia .eventi {
-    background: #16213e;
-    border-left: 3px solid #e94560;
-    margin-bottom: 8px; 
-    padding: 12px 20px; 
-    display: flex;
-    align-items: center;
-}
-
-#storia .eventi h3 {
-    margin: 0;
-    flex: 0 0 160px; /*non si allarga, non si restringe ma rimane fissa*/
-    font-size: 14px;
-    color: #e94560;
-    font-weight: 800;
-}
-
-#storia .eventi p {
-    margin: 0;
-    flex: 1; /* Il testo occupa tutto lo spazio rimanente */
-    font-size: 14px;
-    color: #d1d1d1;
+.eventi h3 {
+    color: #4ecca3;
+    margin-bottom: 5px;
+    font-size: 18px;
 }
 
 .criminale {
-    background: #16213e;
-    border-left: 4px solid #e94560;
+    background: rgba(255, 255, 255, 0.05);
     margin-bottom: 15px;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #30475e;
+    text-align: left;
+}
+
+.titoloOrg {
+    background: #1b1b3a;
     padding: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.3s;
 }
 
-.criminale h3 {
-    margin: 0 0 10px 0;
-    font-size: 18px;
-    color: #e94560;
+.titoloOrg:hover {
+    background: #25254d;
 }
 
-/*serve per far comparire il contenuto scritto alla fine di ogni sezione*/
-section::after {
-    display: block;
-    content: "Linea Libera (800 582 727) • Numero Verde Vittime Mafia (800 191 000)";
-    margin-top: 30px;
-    padding: 15px;
-    background: #e94560;
-    color: white;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
+.titoloOrg h3 {
+    margin: 0;
+    color: #4ecca3;
+    font-size: 19px;
+}
+
+.contenutoTendina {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.contenutoTendina p {
+    padding: 20px;
+    line-height: 1.7;
+    color: #adb5bd;
+    font-size: 15px;
+}
+
+.aperto {
+    max-height: 1000px;
+}
+
+.antimafiaTesto {
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.antimafiaTesto p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.antimafiaTesto .descrizioneConfisca {
+    line-height: 1.6;
+    color: #adb5bd;
+}
+
+.boxInterattivo {
+    background: #0f0f1a;
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid #4ecca3;
+    margin-top: 15px;
     text-align: center;
-    font-size: 13px;
-    border-radius: 4px;
+}
+
+input {
+    padding: 12px;
+    border-radius: 5px;
+    border: none;
+    width: 250px;
+    margin-bottom: 10px;
+    font-size: 15px;
+    color: #000;
+}
+
+button.bottoneAzione {
+    padding: 10px 22px;
+    background: #4ecca3;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    margin: 8px;
+    color: #0f0f1a;
+    transition: 0.2s;
+}
+
+button.bottoneAzione:hover {
+    background: white;
+}
+
+#testoDomanda {
+    font-size: 19px;
+    margin-bottom: 20px;
+}
+
+#opzioniQuiz {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+#opzioniQuiz button {
+    padding: 12px 25px;
+    background: #4ecca3;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    color: #0f0f1a;
+    transition: 0.2s;
+}
+
+#opzioniQuiz button:hover:not(:disabled) {
+    background: white;
+}
+
+#opzioniQuiz button:disabled {
+    opacity: 0.6;
+    cursor: default;
+}
+
+#feedbackQuiz {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    min-height: 24px;
+}
+
+.quizFinitoTitolo {
+    color: #4ecca3;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.quizFinitoPunteggio {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.risultatoSimulatore {
+    text-align: left;
+    margin: 20px auto 0;
+    max-width: 400px;
+    line-height: 2;
+}
+
+.valoreEvidenziato {
+    color: #4ecca3;
+    font-weight: bold;
+}
+
+footer {
+    background: #1a1a2e;
+    padding: 30px 20px;
+    text-align: center;
+    border-top: 2px solid #4ecca3;
+}
+
+.contattiCentrati {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.numeroContatto {
+    color: #4ecca3;
+    font-weight: bold;
 }
