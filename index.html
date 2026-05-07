@@ -8,92 +8,104 @@
 </head>
 <body>
 
-    <nav id="menu">
-        <button id="btnHome">HOME</button>
-        <button id="btnStoria">LA STORIA</button>
-        <button id="btnOrganizzazioni">LE ORGANIZZAZIONI</button>
-        <button id="btnAntimafia">LE POLITICHE ANTIMAFIA</button>
-        <button id="btnQuiz">QUIZ</button>
+    <nav>
+        <button data-target="home">Home</button>
+        <button data-target="storia">La Storia</button>
+        <button data-target="organizzazioni">Organizzazioni</button>
+        <button data-target="antimafia">Antimafia</button>
+        <button data-target="quiz">Quiz</button>
     </nav>
 
     <main>
-        <section id="home" class="active">
-            <div class="container">
-                <h1 class="main-title">EDUCAZIONE ALLA LEGALITA'</h1>
-                <p class="subtitle">La lotta alla mafia in Italia</p>
-                <p class="quote">
+        <section id="home">
+            <div class="contenitore">
+                <h1>EDUCAZIONE ALLA LEGALITA'</h1>
+                <p class="sottoTitolo">La lotta alla mafia in Italia</p>
+                <p class="citazione">
                     "La mafia è un fatto umano e come tutti i fatti umani ha un inizio e avrà anche una fine." <br>— Giovanni Falcone
                 </p>
             </div>
         </section>
 
         <section id="storia">
-            <div class="container">
+            <div class="contenitore">
                 <h2>Cronologia Storica</h2>
-                <div class="eventi-container">
-                    <div class="eventi"><h3>XIX secolo</h3><p>In seguito all’Unità d’Italia nascono le prime forme di mafia in Sicilia.</p></div>
-                    <div class="eventi"><h3>1986-1992</h3><p>Maxiprocesso di Palermo guidato da Falcone e Borsellino.</p></div>
-                    <div class="eventi"><h3>1992</h3><p>Stragi di Capaci e via D’Amelio.</p></div>
-                    <div class="eventi"><h3>Oggi</h3><p>Lotta alle infiltrazioni economiche e finanziarie.</p></div>
+                <div class="contenitoreEventi">
+                    <div class="eventi"><h3>XIX secolo</h3><p>In seguito all’Unità d’Italia nascono le prime forme di mafia in Sicilia legate al controllo del territorio.</p></div>
+                    <div class="eventi"><h3>1925-1929</h3><p>Campagna antimafia di Cesare Mori sotto il regime di Benito Mussolini.</p></div>
+                    <div class="eventi"><h3>Anni ‘50-’60</h3><p>Sacco di Palermo: speculazione edilizia e corruzione urbanistica.</p></div>
+                    <div class="eventi"><h3>1970-1980</h3><p>Seconda guerra di mafia tra i clan per il predominio territoriale.</p></div>
+                    <div class="eventi"><h3>1986-1992</h3><p>Il Maxiprocesso di Palermo infligge un colpo storico a Cosa Nostra grazie a Falcone e Borsellino.</p></div>
+                    <div class="eventi"><h3>23 Maggio 1992</h3><p>Giovanni Falcone viene ucciso nella Strage di Capaci.</p></div>
+                    <div class="eventi"><h3>19 Luglio 1992</h3><p>Paolo Borsellino viene ucciso nella Strage di via D’Amelio.</p></div>
+                    <div class="eventi"><h3>1993</h3><p>Arresto del boss Salvatore Riina dopo decenni di latitanza.</p></div>
+                    <div class="eventi"><h3>2006</h3><p>Arresto di Bernardo Provenzano a Corleone.</p></div>
+                    <div class="eventi"><h3>2010-2020</h3><p>Evoluzione verso la "mafia silente" e l'infiltrazione economica e finanziaria.</p></div>
                 </div>
             </div>
         </section>
 
         <section id="organizzazioni">
-            <div class="container">
+            <div class="contenitore">
                 <h2>Le Organizzazioni</h2>
                 <div class="criminale">
-                    <div class="titolo-org" data-target="ndrangheta"><h3>NDRANGHETA</h3><span>▼</span></div>
-                    <div id="ndrangheta" class="contenuto-tendina">
-                        <p>Originaria della Calabria, basata sul vincolo di sangue ('ndrine). Leader nel narcotraffico globale.</p>
+                    <div class="titoloOrg" data-org="ndrangheta"><h3>NDRANGHETA</h3><span>▼</span></div>
+                    <div id="ndrangheta" class="contenutoTendina">
+                        <p>Originaria della Calabria, diffusa a livello globale in oltre 80 Paesi nel mondo, l’unica a essere presente in tutti e 5 i continenti. E’ caratterizzata da una struttura fondata sul vincolo di sangue, suddivisi in ‘ndrine. La sua attività principale è il narcotraffico, seguita dalla partecipazione in appalti, e condizionamento del voto elettorale. In Calabria svolge un profondo condizionamento sociale basato sulle armi e sul ruolo economico raggiunto attraverso il riciclo di denaro.</p>
                     </div>
                 </div>
                 <div class="criminale">
-                    <div class="titolo-org" data-target="cosanostra"><h3>COSA NOSTRA</h3><span>▼</span></div>
-                    <div id="cosanostra" class="contenuto-tendina">
-                        <p>Nasce in Sicilia e si doffone molto anche negli USA a seguito delle immigrazioni del XX secolo dall’Italia. Sono divisi in famiglie dette cosche.
-                        Infiltrati nel kondo dell’imprenditoria e della finanza, grazie a pratiche come estorsioni (“pizzo”). Operano anche nel traffico di droga, in particolare eroina, e negli appalti pubblici</p>
+                    <div class="titoloOrg" data-org="cosanostra"><h3>COSA NOSTRA</h3><span>▼</span></div>
+                    <div id="cosanostra" class="contenutoTendina">
+                        <p>Nasce in Sicilia e si diffonde molto anche negli USA a seguito delle immigrazioni del XX secolo dall’Italia. Sono divisi in famiglie dette cosche. Infiltrati nel mondo dell’imprenditoria e della finanza, grazie a pratiche come estorsioni (“pizzo”). Operano anche nel traffico di droga, in particolare eroina, e negli appalti pubblici.</p>
                     </div>
                 </div>
                 <div class="criminale">
-                    <div class="titolo-org" data-target="camorra"><h3>CAMORRA</h3><span>▼</span></div>
-                    <div id="camorra" class="contenuto-tendina">
-                        <p>Le sue radici storiche risalgono all'Ottocento nella Campania. E’ organizzata in gruppi autonomi, detti clan, spesso in competizione tra loro.
-                        Sono coinvolti in attività illecite come il traffico di droga, le estorsioni, gli appalti pubblici e il riciclaggio di denaro; si infiltrano anche nella politica locale</p>
+                    <div class="titoloOrg" data-org="camorra"><h3>CAMORRA</h3><span>▼</span></div>
+                    <div id="camorra" class="contenutoTendina">
+                        <p>Le sue radici storiche risalgono all'Ottocento nella Campania. E’ organizzata in gruppi autonomi, detti clan, spesso in competizione tra loro. Sono coinvolti in attività illecite come il traffico di droga, le estorsioni, gli appalti pubblici e il riciclaggio di denaro; si infiltrano anche nella politica locale.</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <section id="antimafia">
-            <div class="container">
+            <div class="contenitore">
                 <h2>Politiche Antimafia</h2>
-                <p class="intro-antimafia">La <b>Legge 109/96</b> permette il riutilizzo sociale dei beni confiscati.</p>
-                <div class="box-interattivo">
+                <div class="antimafiaTesto">
+                    <p>La lotta alle mafie in Italia non si limita alla sola repressione giudiziaria, ma colpisce il cuore del potere criminale: il patrimonio. Uno degli strumenti più potenti è la <b>Legge 109/96</b>, che permette il <b>riutilizzo sociale dei beni confiscati</b>.</p>
+                    <p class="descrizioneConfisca">Grazie a questa legge, ville, terreni e aziende sottratti ai boss vengono restituiti alla collettività, trasformandosi in centri per giovani, cooperative agricole o scuole.</p>
+                </div>
+                <div class="boxInterattivo">
                     <h3>Simulatore Valore Sociale</h3>
+                    <p>Calcola l'impatto potenziale di un bene confiscato:</p>
                     <input type="number" id="cifra" placeholder="Importo in €">
                     <br>
-                    <button id="btnCalcola">Calcola Impatto</button>
-                    <div id="risultato"></div>
+                    <button id="btnCalcola" class="bottoneAzione">Calcola Impatto</button>
+                    <div id="risultato" class="risultatoSimulatore"></div>
                 </div>
             </div>
         </section>
 
         <section id="quiz">
-            <div class="container">
+            <div class="contenitore">
                 <h2>Test Finale</h2>
-                <div class="box-interattivo" id="quiz-box">
-                    <p id="testo-domanda"></p>
-                    <div id="opzioni-quiz"></div>
-                    <div id="feedback"></div>
+                <div class="boxInterattivo" id="quizBox">
+                    <p id="testoDomanda">Caricamento...</p>
+                    <div id="opzioniQuiz"></div>
+                    <div id="feedbackQuiz"></div>
+                    <div id="contenitoreBottoneAvanza"></div>
                 </div>
             </div>
         </section>
     </main>
 
     <footer>
-        <div class="container">
-            <p>Linea Libera: <b>800 582 727</b></p>
+        <div class="contenitore">
+            <div class="contattiCentrati">
+                <div>Linea Libera: <span class="numeroContatto">800 582 727</span></div>
+                <div>Vittime Mafia: <span class="numeroContatto">800 191 000</span></div>
+            </div>
         </div>
     </footer>
 
